@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/record"
+        android:transitionName="logo_image" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="Welcome,"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textSize="40sp"
+        android:transitionName="logo_text
+"
+        android:textColor="@color/colorAccent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="Get Registered!!"
+        android:textSize="20dp"
+        android:textColor="@color/colorAccent"
+        android:transitionName="logo_image"
+        android:fontFamily="sans-serif-condensed-medium"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/fullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Full Name"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="E-mail"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Password"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:inputType="textPassword"
+            android:transitionName="logo_password"/>
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Confirm Password"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:inputType="textPassword"
+            android:transitionName="logo_user"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/registerBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="REGISTER"
+        android:transitionName="logo_signin"/>
+
+</LinearLayout>

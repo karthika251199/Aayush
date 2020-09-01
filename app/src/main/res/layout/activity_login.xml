@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    tools:context=".Login"
+    android:padding="20dp">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:transitionName="logo_image"
+        android:src="@drawable/record"
+        android:id="@+id/logo_image"/>
+
+    <TextView
+        android:id="@+id/logo_name"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello there,"
+        android:textSize="40sp"
+        android:transitionName="logo_text"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textColor="@color/colorAccent"/>
+
+    <TextView
+        android:id="@+id/slogan_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Sign In"
+        android:textSize="20dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textColor="@color/colorAccent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:fontFamily="sans-serif-condensed-medium"/>
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:fontFamily="sans-serif-condensed-medium"/>
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#00000000"
+            android:elevation="0dp"
+            android:layout_gravity="right"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Forgot Password?"
+            />
+
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Sign In" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:id="@+id/Sign"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:background="#00000000"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="New User? Sign Up" />
+    </LinearLayout>
+
+</LinearLayout>

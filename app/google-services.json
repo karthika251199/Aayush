@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "300622845099",
+    "firebase_url": "https://aaush-728a9.firebaseio.com",
+    "project_id": "aaush-728a9",
+    "storage_bucket": "aaush-728a9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:300622845099:android:8b5b48bcf29bd1168e93ee",
+        "android_client_info": {
+          "package_name": "com.example.aaush"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "300622845099-ahhdbtl2llisgd7pa534o1fgaefdb0vc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCe8Qs1QCAu8uaeR__lfAsOdUBIzwV1FwI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "300622845099-ahhdbtl2llisgd7pa534o1fgaefdb0vc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
