@@ -50,8 +50,9 @@
             android:id="@+id/fullName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_user"
             android:layout_marginTop="20dp"
-            android:hint="Full Name"
+            android:hint=" Full Name"
             android:fontFamily="sans-serif-condensed-medium"
             android:inputType="text" />
 
@@ -59,8 +60,9 @@
             android:id="@+id/Email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_message"
             android:layout_marginTop="10dp"
-            android:hint="E-mail"
+            android:hint=" E-mail"
             android:fontFamily="sans-serif-condensed-medium"
             android:inputType="text" />
 
@@ -68,8 +70,9 @@
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_key"
             android:layout_marginTop="10dp"
-            android:hint="Password"
+            android:hint=" Password"
             android:fontFamily="sans-serif-condensed-medium"
             android:inputType="textPassword"
             android:transitionName="logo_password"/>
@@ -78,8 +81,9 @@
             android:id="@+id/phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_baseline_check_24"
             android:layout_marginTop="10dp"
-            android:hint="Confirm Password"
+            android:hint=" Confirm Password"
             android:fontFamily="sans-serif-condensed-medium"
             android:inputType="textPassword"
             android:transitionName="logo_user"/>
