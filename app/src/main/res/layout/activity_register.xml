@@ -81,11 +81,11 @@
             android:id="@+id/phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_baseline_check_24"
+            android:drawableLeft="@drawable/ic_baseline_local_phone_24"
             android:layout_marginTop="10dp"
-            android:hint=" Confirm Password"
+            android:hint=" Phone Number"
             android:fontFamily="sans-serif-condensed-medium"
-            android:inputType="textPassword"
+            android:inputType="number"
             android:transitionName="logo_user"/>
 
 
