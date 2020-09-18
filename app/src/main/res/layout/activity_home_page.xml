@@ -49,23 +49,23 @@
             android:layout_gravity="center"
             android:orientation="vertical">
 
-            <Button
+            <ImageButton
                 android:id="@+id/addAppointment"
                 android:layout_width="wrap_content"
                 android:layout_height="68dp"
                 android:layout_margin="14dp"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/round_button"
+                android:background="@drawable/calender"
                 android:gravity="center_vertical|center_horizontal"
-                android:text="+"
                 android:textColor="#fff"
                 android:textSize="50dp" />
 
             <TextView
                 android:id="@+id/textView3"
-                android:layout_width="177dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
+                android:layout_marginLeft="30dp"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:gravity="center_vertical"
                 android:text="Appointments"

@@ -7,17 +7,17 @@
     android:background="#fff"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".Register">
+    tools:context=".Appointments">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="ADD APPOINTMENT"
         android:textColor="@color/colorAccent"
-        android:textSize="40sp"
+        android:textSize="30sp"
+        android:layout_gravity="center_horizontal"
         android:transitionName="logo_text
 " />
 
@@ -25,8 +25,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:baselineAligned="false"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
         android:textSize="15dp"
+        android:fontFamily="sans-serif-condensed-medium"
         android:text="Hospital Name" />
 
     <EditText
@@ -34,7 +35,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Enter Hospital Name" />
+        android:fontFamily="sans-serif-condensed-medium"
+        android:hint="Enter Hospital Name" />
 
     <TextView
         android:layout_width="match_parent"
@@ -42,6 +44,7 @@
         android:baselineAligned="false"
         android:layout_marginTop="10dp"
         android:textSize="15dp"
+        android:fontFamily="sans-serif-condensed-medium"
         android:text="Date" />
 
     <EditText
@@ -49,7 +52,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Enter Date" />
+        android:fontFamily="sans-serif-condensed-medium"
+        android:hint="Enter Date" />
 
     <TextView
         android:id="@+id/textView"
@@ -58,6 +62,7 @@
         android:baselineAligned="false"
         android:layout_marginTop="10dp"
         android:textSize="15dp"
+        android:fontFamily="sans-serif-condensed-medium"
         android:text="Time" />
 
     <EditText
@@ -65,8 +70,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:fontFamily="sans-serif-condensed-medium"
         android:inputType="textPersonName"
-        android:text="Enter Time" />
+        android:hint="Enter Time" />
 
 
 </LinearLayout>
