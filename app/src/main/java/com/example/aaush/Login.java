@@ -26,7 +26,7 @@ public class Login extends AppCompatActivity {
 
     Button mLoginBtn;
     EditText mEmail,mPassword;
-    TextView Sign,forgotTextLink;
+    TextView Sign,forgotTextLink,btbio;
     FirebaseAuth fAuth;
 
     @Override
@@ -35,6 +35,7 @@ public class Login extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_login);
 
+        btbio= findViewById(R.id.btbio);
         Sign = findViewById(R.id.Sign);
         mEmail = findViewById(R.id.Email);
         mPassword = findViewById(R.id.password);
@@ -69,7 +70,7 @@ public class Login extends AppCompatActivity {
 
                         if(task.isSuccessful()){
                             Toast.makeText(Login.this, "Logged In!!", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(),HomePage.class));
+                            startActivity(new Intent(getApplicationContext(),Gridview.class));
                         }else{
                             Toast.makeText(Login.this, "Please enter valid password or email", Toast.LENGTH_SHORT).show();
                         }
@@ -86,6 +87,15 @@ public class Login extends AppCompatActivity {
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(),Register.class));
             }
+        });
+
+        btbio.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),Biometric.class));
+            }
+
         });
 
         forgotTextLink.setOnClickListener(new View.OnClickListener() {
@@ -132,4 +142,5 @@ public class Login extends AppCompatActivity {
             }
         });
     }
+
 }

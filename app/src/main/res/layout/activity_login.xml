@@ -25,7 +25,7 @@
         android:layout_marginLeft="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello there,"
+        android:text="Hello there!!"
         android:textSize="40sp"
         android:transitionName="logo_text"
         android:fontFamily="sans-serif-condensed-medium"
@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
-        android:text="Sign In"
+        android:text="Sign in here.."
         android:textSize="20dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:textColor="@color/colorAccent"/>
@@ -52,7 +52,7 @@
         <EditText
             android:id="@+id/Email"
             android:layout_width="match_parent"
-            android:drawableLeft="@drawable/ic_message"
+            android:drawableRight="@drawable/ic_message"
             android:layout_height="wrap_content"
             android:hint=" Email"
             android:fontFamily="sans-serif-condensed-medium"/>
@@ -61,7 +61,7 @@
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_key"
+            android:drawableRight="@drawable/ic_key"
             android:layout_marginTop="20dp"
             android:hint=" Password"
             android:inputType="textPassword"
@@ -73,33 +73,56 @@
             android:layout_marginTop="20dp"
             android:background="#00000000"
             android:elevation="0dp"
-            android:layout_gravity="right"
-            android:gravity="right"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:textSize="15dp"
+            android:textColor="@color/colorAccent"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Forgot Password?"
-            android:id="@+id/forgotPassword"
-            />
+            android:id="@+id/forgotPassword" />
 
         <Button
             android:id="@+id/loginBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:background="@color/colorAccent"
+            android:layout_marginTop="20dp"
+            android:textColor="#F6F8F8"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="Sign In" />
 
-        <TextView
-            android:layout_width="200dp"
-            android:id="@+id/Sign"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center"
-            android:background="#00000000"
-            android:textSize="15dp"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:text="New User? Sign Up" />
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="150dp"
+                android:id="@+id/Sign"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#00000000"
+                android:textColor="@color/colorAccent"
+                android:textSize="15dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="New User? Sign Up" />
+
+            <TextView
+                android:id="@+id/btbio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="70sp"
+                android:textColor="@color/colorAccent"
+                android:background="#00000000"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:text="Biometric"
+                android:textSize="15dp" />
+
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

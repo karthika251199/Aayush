@@ -3,6 +3,7 @@
     package="com.example.aaush">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
 
     <application
         android:allowBackup="true"
@@ -11,13 +12,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Appointments"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".Gridview"></activity>
+        <activity android:name=".Biometric" />
+        <activity
+            android:name=".Appointments"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".Profile"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".Logout" />
-        <activity android:name=".HomePage" />
         <activity
             android:name=".Login"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
