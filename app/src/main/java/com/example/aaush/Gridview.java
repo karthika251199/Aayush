@@ -80,7 +80,15 @@ public class Gridview extends AppCompatActivity {
         share.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),Appointments.class));
+                Intent sharingIntent  = new Intent(Intent.ACTION_SEND);
+                sharingIntent.setType("text/plain");
+                String shareBody = "Your Body here";
+                String shareSubject = "Your Subject here";
+
+                sharingIntent.putExtra(Intent.EXTRA_TEXT,shareBody);
+                sharingIntent.putExtra(Intent.EXTRA_SUBJECT,shareSubject);
+
+                startActivity(Intent.createChooser(sharingIntent, "Share Using"));
             }
         });
 
