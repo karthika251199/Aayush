@@ -21,14 +21,19 @@
         android:transitionName="logo_text
 " />
 
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="362dp"
+        android:layout_height="316dp" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:baselineAligned="false"
-        android:layout_marginTop="30dp"
-        android:textSize="15dp"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="Hospital Name" />
+        android:text="Hospital Name"
+        android:textSize="15dp" />
 
     <EditText
         android:layout_width="match_parent"
@@ -42,7 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:baselineAligned="false"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="25dp"
         android:textSize="15dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="Date" />
@@ -60,7 +65,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:baselineAligned="false"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="25dp"
         android:textSize="15dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="Time" />
@@ -71,8 +76,14 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:fontFamily="sans-serif-condensed-medium"
-        android:inputType="textPersonName"
-        android:hint="Enter Time" />
+        android:hint="Enter Time"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save" />
 
 
 </LinearLayout>

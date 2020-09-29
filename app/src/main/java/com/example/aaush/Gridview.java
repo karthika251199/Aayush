@@ -4,8 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.Manifest;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -73,9 +76,11 @@ public class Gridview extends AppCompatActivity {
         camara.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),Appointments.class));
+                startActivity(new Intent(getApplicationContext(),Image.class));
             }
         });
+
+        
 
         share.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,6 +96,16 @@ public class Gridview extends AppCompatActivity {
                 startActivity(Intent.createChooser(sharingIntent, "Share Using"));
             }
         });
+
+
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        Bitmap bitmap = (Bitmap)data.getExtras().get("data");
 
 
     }
