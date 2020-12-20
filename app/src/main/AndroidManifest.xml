@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.USE_BIOMETRIC" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -18,6 +18,9 @@
         <activity android:name=".Gridview"></activity>
         <activity android:name=".Biometric" />
         <activity android:name=".Image"></activity>
+        <activity
+            android:name=".Records"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".Appointments"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
