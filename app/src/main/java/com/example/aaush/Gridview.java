@@ -61,7 +61,7 @@ public class Gridview extends AppCompatActivity {
         reminders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),Appointments.class));
+                startActivity(new Intent(getApplicationContext(),Calendar.class));
             }
         });
 
@@ -111,8 +111,8 @@ public class Gridview extends AppCompatActivity {
 
     public boolean onCreateOptionsMenu(Menu menu) {
         menu.add("profile");
-        menu.add("share");
         menu.add("logout");
+        menu.add("phone");
 
 
         return super.onCreateOptionsMenu(menu);
@@ -124,8 +124,8 @@ public class Gridview extends AppCompatActivity {
         if (item.getTitle() == "profile") {
             //Toast.makeText(this,"profile is Selected", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(getApplicationContext(), Profile.class));
-        } else if (item.getTitle() == "share") {
-            Toast.makeText(this, "share is Selected", Toast.LENGTH_SHORT).show();
+        } else if (item.getTitle() == "phone") {
+            startActivity(new Intent(getApplicationContext(), SOS.class));
         } else if (item.getTitle() == "logout") {
             //Toast.makeText( this,"logout is Selected", Toast.LENGTH_SHORT).show();
                /* FirebaseAuth.getInstance().signOut();

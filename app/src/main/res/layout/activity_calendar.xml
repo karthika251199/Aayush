@@ -1,0 +1,60 @@
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="10dp"
+        android:transitionName="logo_image"
+        android:src="@drawable/screen"
+        android:id="@+id/logo_image"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Appointments"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:fontFamily="cursive"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/colorAccent"/>
+    
+    <EditText
+        android:id="@+id/etTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:text="Doctor's Name:"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:inputType="text"/>
+    
+    <EditText
+        android:id="@+id/etDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:text="Description:"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:inputType="text" />
+
+
+    
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Next"
+        />
+     
+
+</LinearLayout>
