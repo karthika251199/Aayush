@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:text="Welcome,"
         android:textColor="@color/colorAccent"
-        android:textSize="50dp"
+        android:textSize="60dp"
         android:fontFamily="cursive"
         />
 
@@ -48,7 +48,7 @@
                 android:layout_height="95dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="108dp"
                 android:background="@drawable/roundcalender"
                 tools:ignore="InvalidId" />
 

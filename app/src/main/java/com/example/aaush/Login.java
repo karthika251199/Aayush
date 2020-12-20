@@ -26,7 +26,7 @@ public class Login extends AppCompatActivity {
 
     Button mLoginBtn;
     EditText mEmail,mPassword;
-    TextView Sign,forgotTextLink,btbio;
+    TextView SignIn,forgotTextLink,btbio;
     FirebaseAuth fAuth;
 
     @Override
@@ -36,7 +36,7 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         btbio= findViewById(R.id.btbio);
-        Sign = findViewById(R.id.Sign);
+        SignIn = findViewById(R.id.SignIn);
         mEmail = findViewById(R.id.Email);
         mPassword = findViewById(R.id.password);
         mLoginBtn = findViewById(R.id.loginBtn);
@@ -82,7 +82,7 @@ public class Login extends AppCompatActivity {
             }
         });
 
-        Sign.setOnClickListener(new View.OnClickListener() {
+        SignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(),Register.class));

@@ -5,47 +5,55 @@
     android:gravity="center"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="10dp"
+        android:transitionName="logo_image"
+        android:src="@drawable/screen"
+        android:id="@+id/logo_image"/>
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Appointments"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:fontFamily="cursive"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/colorAccent"/>
     
     <EditText
         android:id="@+id/etTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
         android:ems="10"
         android:text="Doctor's Name:"
+        android:fontFamily="sans-serif-condensed-medium"
         android:inputType="text"/>
     
-    <EditText
-        android:id="@+id/etLocation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:text="Date of Appointment:"
-        android:inputType="date" />
-
     <EditText
         android:id="@+id/etDesc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:text="Appointment Time:"
-        android:inputType="time" />
+        android:text="Description:"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:inputType="text" />
+
+
     
     <Button
         android:id="@+id/btnAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Add"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Next"
         />
      
 

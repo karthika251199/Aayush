@@ -13,7 +13,7 @@ import android.widget.Toast;
 public class Calendar extends AppCompatActivity {
 
     EditText title;
-    EditText location;
+   // EditText location;
     EditText descreption;
     Button addevent;
 
@@ -24,21 +24,21 @@ public class Calendar extends AppCompatActivity {
 
         addevent =  findViewById(R.id.btnAdd);
         descreption = findViewById(R.id.etDesc);
-        location = findViewById(R.id.etLocation);
+        //location = findViewById(R.id.etLocation);
         title = findViewById(R.id.etTitle);
 
         addevent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!title.getText().toString().isEmpty() && !location.getText().toString().isEmpty() && !descreption.getText().toString().isEmpty()){
+                if(!title.getText().toString().isEmpty()){
 
                     Intent intent = new Intent(Intent.ACTION_INSERT);
                     intent.setData(CalendarContract.Events.CONTENT_URI);
                     intent.putExtra(CalendarContract.Events.TITLE,title.getText().toString());
-                    intent.putExtra(CalendarContract.Reminders.LAST_DATE,descreption.getText().toString());
-                    intent.putExtra(CalendarContract.Reminders.EVENT_END_TIMEZONE,location.getText().toString());
+                    intent.putExtra(CalendarContract.Reminders.DESCRIPTION,descreption.getText().toString());
+                   // intent.putExtra(CalendarContract.Reminders.EVENT_END_TIMEZONE,location.getText().toString());
                     intent.putExtra(CalendarContract.Events.ALL_DAY, "true");
-                    intent.putExtra(Intent.EXTRA_EMAIL,"rads@gmail.com");
+                    intent.putExtra(Intent.EXTRA_EMAIL,"ponnada1999@gmail.com");
 
                     if(intent.resolveActivity(getPackageManager())!=null){
 
