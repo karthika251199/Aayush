@@ -37,7 +37,8 @@
         android:fontFamily="sans-serif-condensed-medium"
         android:layout_gravity="center_horizontal"
         android:drawableLeft="@drawable/ic_user"
-        android:text="  User"
+        android:text="      User"
+        android:textColor="@color/colorAccent"
         android:textSize="20dp" />
 
     <TextView
@@ -49,7 +50,8 @@
         android:layout_marginTop="30dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:drawableLeft="@drawable/ic_message"
-        android:text="  Email"
+        android:text="      Email"
+        android:textColor="@color/colorAccent"
         android:textSize="20dp" />
 
     <TextView
@@ -60,7 +62,8 @@
         android:layout_marginLeft="20dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:drawableLeft="@drawable/ic_baseline_local_phone_24"
-        android:text="  Phone"
+        android:text="       Phone"
+        android:textColor="@color/colorAccent"
         android:textSize="20dp"
         android:id="@+id/profilePhone"/>
 

@@ -123,7 +123,7 @@ public class SOS extends AppCompatActivity {
         } catch (Exception e)
         {
             e.printStackTrace();
-            Toast.makeText(this, "Faied to send msg",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Failed to send msg",Toast.LENGTH_SHORT).show();
         }
 
 

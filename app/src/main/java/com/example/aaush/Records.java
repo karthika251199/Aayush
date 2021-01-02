@@ -27,7 +27,7 @@ public class Records extends AppCompatActivity {
         setContentView(R.layout.activity_records);
 
         mImageView = findViewById(R.id.image_view);
-        mChooseBtn = findViewById(R.id.capture_image_btn);
+        mChooseBtn = findViewById(R.id.choose_image_btn);
 
         mChooseBtn.setOnClickListener(new View.OnClickListener() {
             @Override

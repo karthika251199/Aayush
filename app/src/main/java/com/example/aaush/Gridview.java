@@ -111,8 +111,8 @@ public class Gridview extends AppCompatActivity {
 
     public boolean onCreateOptionsMenu(Menu menu) {
         menu.add("profile");
-        menu.add("logout");
         menu.add("phone");
+        menu.add("logout");
 
 
         return super.onCreateOptionsMenu(menu);

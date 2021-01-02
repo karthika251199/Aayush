@@ -96,6 +96,7 @@
         android:layout_marginTop="25dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="REGISTER"
+        android:background="@color/colorAccent"
         android:transitionName="logo_signin"/>
 
 </LinearLayout>

@@ -54,6 +54,7 @@
         android:layout_marginTop="10dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="Next"
+        android:background="@color/colorAccent"
         />
      
 
