@@ -58,6 +58,7 @@
                 android:layout_marginTop="5dp"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:text="Add Reminders"
+                android:textColor="@color/colorAccent"
                 android:textSize="18sp" />
 
             <ImageButton
@@ -75,6 +76,7 @@
                 android:layout_marginTop="4dp"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:text="Upload Reports"
+                android:textColor="@color/colorAccent"
                 android:textSize="18sp" />
         </LinearLayout>
 
@@ -98,6 +100,7 @@
                 android:layout_marginLeft="40dp"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:text="Cam Scanner"
+                android:textColor="@color/colorAccent"
                 android:textSize="18sp" />
 
             <ImageButton
@@ -115,6 +118,7 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:text="Share"
+                android:textColor="@color/colorAccent"
                 android:textSize="18dp" />
         </LinearLayout>
 

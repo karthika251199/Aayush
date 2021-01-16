@@ -4,25 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F8F6F6"
+    android:backgroundTint="#FBF8F8"
+    android:divider="@drawable/custom_button"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="20dp"
     tools:context=".SOS">
 
     <ImageView
-        android:layout_width="168dp"
-        android:layout_height="143dp"
+        android:layout_width="136dp"
+        android:layout_height="122dp"
         android:layout_marginBottom="180dp"
+        android:background="#F6FAF9"
         android:src="@drawable/contac" />
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="81dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="-150dp"
+<<<<<<< HEAD
         android:fontFamily="sans-serif-condensed-medium"
         android:text="Contact"
         android:textColor="@color/colorAccent"
         android:textSize="60dp"/>
+=======
+        android:fontFamily="cursive"
+        android:padding="5dp"
+        android:text="Contact"
+        android:textColor="@color/colorAccent"
+        android:textSize="50dp"
+        android:textStyle="bold" />
+>>>>>>> origin/master
 
     <EditText
         android:id="@+id/phone"
@@ -43,8 +56,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:background="@color/colorAccent"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="call"
+        android:textColor="#F4FAF9"
         android:textStyle="bold" />
 
     <TextView
@@ -68,8 +83,13 @@
         android:layout_marginTop="-65dp"
         android:layout_marginBottom="10dp"
         android:gravity="center"
+<<<<<<< HEAD
         android:text="has a Medical Emergency!!!"
         android:textSize="15dp"
+=======
+        android:text="Emergency!!!"
+        android:textSize="25dp"
+>>>>>>> origin/master
         android:textStyle="bold" />
 
 
@@ -77,8 +97,16 @@
         android:id="@+id/bt_msg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_marginTop="10dp"
         android:text="Send" />
+=======
+        android:layout_marginTop="20dp"
+        android:background="@color/colorAccent"
+        android:padding="15dp"
+        android:text="Send Message"
+        android:textColor="#F3F4F4" />
+>>>>>>> origin/master
 
 
 </LinearLayout>
