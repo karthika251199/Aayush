@@ -16,6 +16,7 @@ import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -28,6 +29,7 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 public class SOS extends AppCompatActivity {
     private static final int REQUEST_CALL=1;
     private EditText mEditTextNumber,message;
+    TextView uName;
     FirebaseFirestore fStore;
     FirebaseAuth fAuth;
     String userID;
@@ -42,6 +44,7 @@ public class SOS extends AppCompatActivity {
         mEditTextNumber = findViewById(R.id.phone);
         message = findViewById(R.id.msg);
         send = findViewById(R.id.bt_msg);
+        uName = findViewById(R.id.uName);
         Button bt_call = findViewById(R.id.bt_call);
 
         fAuth = FirebaseAuth.getInstance();
@@ -55,6 +58,7 @@ public class SOS extends AppCompatActivity {
                     public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
 
                         mEditTextNumber.setText(documentSnapshot.getString("phone"));
+                        uName.setText(documentSnapshot.getString("fName"));
                     }
                 });
 

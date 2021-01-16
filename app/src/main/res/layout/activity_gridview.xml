@@ -27,7 +27,6 @@
         android:textColor="@color/colorAccent"
         android:fontFamily="sans-serif-condensed-medium"
         android:layout_gravity="center_horizontal"
-
         android:text="  User"
         android:textSize="20dp" />
 

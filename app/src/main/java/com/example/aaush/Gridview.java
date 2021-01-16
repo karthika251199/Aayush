@@ -68,7 +68,7 @@ public class Gridview extends AppCompatActivity {
         reports.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),Records.class));
+                startActivity(new Intent(getApplicationContext(),MainActivity2.class));
             }
         });
 
