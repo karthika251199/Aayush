@@ -39,6 +39,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         return mList.size();
     }
 
+    public void deleteItem(int position){
+
+
+
+    }
+
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
           ImageView imageView;

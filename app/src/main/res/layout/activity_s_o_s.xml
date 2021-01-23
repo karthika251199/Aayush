@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -23,19 +22,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="-150dp"
-<<<<<<< HEAD
         android:fontFamily="sans-serif-condensed-medium"
         android:text="Contact"
         android:textColor="@color/colorAccent"
         android:textSize="60dp"/>
-=======
-        android:fontFamily="cursive"
-        android:padding="5dp"
-        android:text="Contact"
-        android:textColor="@color/colorAccent"
-        android:textSize="50dp"
-        android:textStyle="bold" />
->>>>>>> origin/master
+
 
     <EditText
         android:id="@+id/phone"
@@ -61,7 +52,6 @@
         android:text="call"
         android:textColor="#F4FAF9"
         android:textStyle="bold" />
-
     <TextView
         android:id="@+id/uName"
         android:layout_width="159dp"
@@ -75,38 +65,23 @@
         android:textStyle="bold" />
 
 
-    <EditText
+      <EditText
         android:id="@+id/msg"
         android:layout_width="159dp"
         android:layout_height="84dp"
         android:layout_gravity="center"
         android:layout_marginTop="-65dp"
+        android:text=" in Emergency!!"
         android:layout_marginBottom="10dp"
-        android:gravity="center"
-<<<<<<< HEAD
-        android:text="has a Medical Emergency!!!"
-        android:textSize="15dp"
-=======
-        android:text="Emergency!!!"
-        android:textSize="25dp"
->>>>>>> origin/master
-        android:textStyle="bold" />
+        android:gravity="center" />
 
 
     <Button
         android:id="@+id/bt_msg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
         android:layout_marginTop="10dp"
         android:text="Send" />
-=======
-        android:layout_marginTop="20dp"
-        android:background="@color/colorAccent"
-        android:padding="15dp"
-        android:text="Send Message"
-        android:textColor="#F3F4F4" />
->>>>>>> origin/master
 
 
 </LinearLayout>

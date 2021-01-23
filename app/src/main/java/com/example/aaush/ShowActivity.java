@@ -1,10 +1,13 @@
 package com.example.aaush;
 
-import androidx.annotation.NonNull;
+import  androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 
 import com.google.firebase.database.DataSnapshot;
@@ -33,6 +36,9 @@ public class ShowActivity extends AppCompatActivity {
         adapter = new MyAdapter(this,list);
         recyclerView.setAdapter(adapter);
 
+        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(simpleCallback);
+        itemTouchHelper.attachToRecyclerView(recyclerView);
+
         root.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -40,7 +46,11 @@ public class ShowActivity extends AppCompatActivity {
                    Model model = dataSnapshot.getValue(Model.class);
                    list.add(model);
                }
-               adapter.notifyDataSetChanged();
+
+
+
+
+                adapter.notifyDataSetChanged();
             }
 
             @Override
@@ -50,4 +60,35 @@ public class ShowActivity extends AppCompatActivity {
         });
 
     }
+
+   ItemTouchHelper.SimpleCallback simpleCallback = new ItemTouchHelper.SimpleCallback(0,ItemTouchHelper.RIGHT) {
+        @Override
+        public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+            return false;
+        }
+
+        @Override
+        public void onSwiped(@NonNull final RecyclerView.ViewHolder viewHolder, int direction) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(ShowActivity.this);
+            builder.setTitle("Delete Upload");
+            builder.setMessage("Are you sure??");
+            builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                     int position = viewHolder.getAdapterPosition();
+                     list.remove(position);
+                     adapter.notifyItemRemoved(position);
+
+                }
+            });
+            builder.setNegativeButton("Cancle", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                      adapter.notifyItemChanged(viewHolder.getAdapterPosition());
+                }
+            });
+            builder.show();
+        }
+    };
+
 }
