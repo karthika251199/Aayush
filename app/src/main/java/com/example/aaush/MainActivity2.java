@@ -6,8 +6,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentResolver;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
@@ -24,9 +28,12 @@ import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.io.File;
+import java.io.FileOutputStream;
+
 public class MainActivity2 extends AppCompatActivity {
 
-    private Button uploadBtn, showAllBtn;
+    private Button uploadBtn, showAllBtn, shareBtn, deleteBtn;
     private ImageView imageView;
     private ProgressBar progressBar;
     private Uri imageUri;
@@ -40,6 +47,8 @@ public class MainActivity2 extends AppCompatActivity {
 
         uploadBtn = findViewById(R.id.upload_btn);
         showAllBtn = findViewById(R.id.showall_btn);
+        shareBtn = findViewById(R.id.share_btn);
+        deleteBtn = findViewById(R.id.delete_btn);
 
         imageView = findViewById(R.id.imageView);
 
@@ -73,6 +82,53 @@ public class MainActivity2 extends AppCompatActivity {
                 }
             }
         });
+
+
+        deleteBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                imageView.setBackground(null);
+
+            }
+        });
+
+
+        shareBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                image ();
+            }
+        });
+
+
+    }
+
+    private void image() {
+        StrictMode.VmPolicy.Builder builder=new StrictMode.VmPolicy.Builder();
+        StrictMode.setVmPolicy(builder.build());
+
+        BitmapDrawable drawable=(BitmapDrawable)imageView.getDrawable();
+        Bitmap bitmap=drawable.getBitmap();
+        File f=new File(getExternalCacheDir()+"/"+getResources().getString(R.string.app_name)+".png");
+        Intent shareint;
+
+
+        try {
+            FileOutputStream outputStream= new FileOutputStream(f);
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100,outputStream);
+
+            outputStream.flush();
+            outputStream.close();
+            shareint= new Intent(Intent.ACTION_SEND);
+            shareint.setType("image/*");
+            shareint.putExtra(Intent.EXTRA_STREAM, imageUri.fromFile(f));
+            shareint.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+        }catch (Exception e){
+            throw new RuntimeException(e);
+        }
+        startActivity(Intent.createChooser(shareint,"share image"));
+
 
 
     }
