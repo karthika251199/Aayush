@@ -24,17 +24,27 @@
         android:fontFamily="cursive"
         android:layout_marginTop="50dp"
         android:textColor="@color/colorAccent"/>
-    
+
     <EditText
         android:id="@+id/etTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:ems="10"
-        android:hint="Doctor's Name:"
         android:fontFamily="sans-serif-condensed-medium"
-        android:inputType="text"/>
-    
+        android:hint="Doctor's Name:"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/drug_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:hint="Medicine Name:"
+        android:inputType="text" />
+
     <EditText
         android:id="@+id/etDesc"
         android:layout_width="match_parent"

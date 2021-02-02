@@ -27,7 +27,7 @@ import java.util.Map;
 
 public class Register extends AppCompatActivity {
 
-    EditText mFullName,mEmail,mPassword,mConfirmPassword,address;
+    EditText mFullName,mEmail,mPassword,mConfirmPassword,address,blood,personal;
     Button mRegisterBtn;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
@@ -45,6 +45,7 @@ public class Register extends AppCompatActivity {
         mConfirmPassword = findViewById(R.id.phone);
         mRegisterBtn = findViewById(R.id.registerBtn);
         address = findViewById(R.id.address);
+        blood = findViewById(R.id.blood);
 
 
 
@@ -64,6 +65,8 @@ public class Register extends AppCompatActivity {
                 final String fullName = mFullName.getText().toString();
                 final String phone = mConfirmPassword.getText().toString();
                 final String add = address.getText().toString();
+                final String bloo = blood.getText().toString();
+
 
                 if (TextUtils.isEmpty(email)) {
                     mEmail.setError("Email is required");
@@ -104,6 +107,7 @@ public class Register extends AppCompatActivity {
                             user.put("email",email);
                             user.put("phone",phone);
                             user.put("address",add);
+                            user.put("blood",bloo);
                             documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {

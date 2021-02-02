@@ -14,7 +14,7 @@ public class Calendar extends AppCompatActivity {
 
     EditText title;
    // EditText location;
-    EditText descreption;
+    EditText descreption,drug_name;
     Button addevent;
 
     @Override
@@ -24,6 +24,8 @@ public class Calendar extends AppCompatActivity {
 
         addevent =  findViewById(R.id.btnAdd);
         descreption = findViewById(R.id.etDesc);
+        drug_name = findViewById(R.id.drug_name);
+
         //location = findViewById(R.id.etLocation);
         title = findViewById(R.id.etTitle);
 
@@ -36,6 +38,7 @@ public class Calendar extends AppCompatActivity {
                     intent.setData(CalendarContract.Events.CONTENT_URI);
                     intent.putExtra(CalendarContract.Events.TITLE,title.getText().toString());
                     intent.putExtra(CalendarContract.Reminders.DESCRIPTION,descreption.getText().toString());
+                    intent.putExtra(CalendarContract.Reminders.DESCRIPTION,drug_name.getText().toString());
                    // intent.putExtra(CalendarContract.Reminders.EVENT_END_TIMEZONE,location.getText().toString());
                     intent.putExtra(CalendarContract.Events.ALL_DAY, "true");
                     intent.putExtra(Intent.EXTRA_EMAIL,"ponnada1999@gmail.com");

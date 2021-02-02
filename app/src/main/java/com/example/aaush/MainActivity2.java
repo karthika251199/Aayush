@@ -33,7 +33,7 @@ import java.io.FileOutputStream;
 
 public class MainActivity2 extends AppCompatActivity {
 
-    private Button uploadBtn, showAllBtn, shareBtn, deleteBtn;
+    private Button uploadBtn, showAllBtn, shareBtn;
     private ImageView imageView;
     private ProgressBar progressBar;
     private Uri imageUri;
@@ -48,7 +48,6 @@ public class MainActivity2 extends AppCompatActivity {
         uploadBtn = findViewById(R.id.upload_btn);
         showAllBtn = findViewById(R.id.showall_btn);
         shareBtn = findViewById(R.id.share_btn);
-        deleteBtn = findViewById(R.id.delete_btn);
 
         imageView = findViewById(R.id.imageView);
 
@@ -83,14 +82,6 @@ public class MainActivity2 extends AppCompatActivity {
             }
         });
 
-
-        deleteBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                imageView.setBackground(null);
-
-            }
-        });
 
 
         shareBtn.setOnClickListener(new View.OnClickListener() {
