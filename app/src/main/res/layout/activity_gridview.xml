@@ -109,7 +109,7 @@
                 android:layout_height="90dp"
                 android:layout_marginLeft="38dp"
                 android:layout_marginTop="50dp"
-                android:background="@drawable/share1" />
+                android:background="@drawable/contac" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -117,7 +117,7 @@
                 android:layout_marginLeft="68dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-condensed-medium"
-                android:text="Share"
+                android:text="Contact"
                 android:textColor="@color/colorAccent"
                 android:textSize="18dp" />
         </LinearLayout>

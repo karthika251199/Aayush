@@ -67,5 +67,20 @@
         android:textSize="20dp"
         android:id="@+id/profilePhone"/>
 
+    <TextView
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:drawableLeft="@drawable/ic_baseline_location_on_24"
+        android:text="       Address"
+        android:textColor="@color/colorAccent"
+        android:textSize="20dp"
+        android:id="@+id/profileAddress"/>
+
+
+
 
 </LinearLayout>

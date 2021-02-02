@@ -27,7 +27,7 @@ import java.util.Map;
 
 public class Register extends AppCompatActivity {
 
-    EditText mFullName,mEmail,mPassword,mConfirmPassword;
+    EditText mFullName,mEmail,mPassword,mConfirmPassword,address;
     Button mRegisterBtn;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
@@ -44,6 +44,8 @@ public class Register extends AppCompatActivity {
         mPassword = findViewById(R.id.password);
         mConfirmPassword = findViewById(R.id.phone);
         mRegisterBtn = findViewById(R.id.registerBtn);
+        address = findViewById(R.id.address);
+
 
 
         fAuth = FirebaseAuth.getInstance();
@@ -61,6 +63,7 @@ public class Register extends AppCompatActivity {
                 String password = mPassword.getText().toString().trim();
                 final String fullName = mFullName.getText().toString();
                 final String phone = mConfirmPassword.getText().toString();
+                final String add = address.getText().toString();
 
                 if (TextUtils.isEmpty(email)) {
                     mEmail.setError("Email is required");
@@ -73,6 +76,18 @@ public class Register extends AppCompatActivity {
 
                 if (password.length() < 6) {
                     mPassword.setError("Password is too short");
+                }
+                if(TextUtils.isEmpty(phone)){
+                    mConfirmPassword.setError("phone no. is required");
+                }
+
+                if(phone.length() != 10){
+                    mConfirmPassword.setError("Enter valid contact number");
+                }
+
+                if(TextUtils.isEmpty(add)){
+                    address.setError("Address is required");
+
                 }
 
                 fAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -88,6 +103,7 @@ public class Register extends AppCompatActivity {
                             user.put("fName",fullName);
                             user.put("email",email);
                             user.put("phone",phone);
+                            user.put("address",add);
                             documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {

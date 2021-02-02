@@ -83,8 +83,8 @@ public class Gridview extends AppCompatActivity {
 
         share.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent sharingIntent  = new Intent(Intent.ACTION_SEND);
+             public void onClick(View view) {
+             /*  Intent sharingIntent  = new Intent(Intent.ACTION_SEND);
                 sharingIntent.setType("text/plain");
                 String shareBody = "Your Body here";
                 String shareSubject = "Your Subject here";
@@ -92,7 +92,9 @@ public class Gridview extends AppCompatActivity {
                 sharingIntent.putExtra(Intent.EXTRA_TEXT,shareBody);
                 sharingIntent.putExtra(Intent.EXTRA_SUBJECT,shareSubject);
 
-                startActivity(Intent.createChooser(sharingIntent, "Share Using"));
+                startActivity(Intent.createChooser(sharingIntent, "Share Using"));*/
+                startActivity(new Intent(getApplicationContext(),SOS.class));
+
             }
         });
 
@@ -111,7 +113,7 @@ public class Gridview extends AppCompatActivity {
 
     public boolean onCreateOptionsMenu(Menu menu) {
         menu.add("profile");
-        menu.add("phone");
+        //menu.add("phone");
         menu.add("logout");
 
 
@@ -124,9 +126,9 @@ public class Gridview extends AppCompatActivity {
         if (item.getTitle() == "profile") {
             //Toast.makeText(this,"profile is Selected", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(getApplicationContext(), Profile.class));
-        } else if (item.getTitle() == "phone") {
+        } /*else if (item.getTitle() == "phone") {
             startActivity(new Intent(getApplicationContext(), SOS.class));
-        } else if (item.getTitle() == "logout") {
+        }*/ else if (item.getTitle() == "logout") {
             //Toast.makeText( this,"logout is Selected", Toast.LENGTH_SHORT).show();
                /* FirebaseAuth.getInstance().signOut();
                 startActivity(new Intent(getApplicationContext(),Login.class));
